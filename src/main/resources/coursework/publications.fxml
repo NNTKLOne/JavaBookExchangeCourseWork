@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coursework.fxControllers.PublicationsController">
+    <children>
+        <!-- ListView for publications -->
+        <ListView fx:id="publicationListView" layoutX="14.0" layoutY="14.0" onMouseClicked="#loadPublicationData" prefHeight="347.0" prefWidth="250.0" />
+
+        <!-- Common fields -->
+        <TextField fx:id="titleField" layoutX="280.0" layoutY="14.0" promptText="Title" />
+        <TextField fx:id="authorField" layoutX="280.0" layoutY="54.0" promptText="Author" />
+
+        <!-- Book fields -->
+        <TextField fx:id="publisherField" layoutX="280.0" layoutY="94.0" promptText="Publisher" />
+        <TextField fx:id="isbnField" layoutX="280.0" layoutY="134.0" promptText="ISBN" />
+        <ComboBox fx:id="genreField" layoutX="280.0" layoutY="174.0" prefWidth="150.0" promptText="Genre" />
+        <TextField fx:id="pageCountField" layoutX="280.0" layoutY="214.0" promptText="Page Count" />
+        <ComboBox fx:id="languageField" layoutX="280.0" layoutY="254.0" prefWidth="150.0" promptText="Language" />
+        <TextField fx:id="publicationYearField" layoutX="280.0" layoutY="294.0" promptText="Publication Year" />
+        <ComboBox fx:id="formatField" layoutX="280.0" layoutY="334.0" prefWidth="150.0" promptText="Format" />
+        <TextField fx:id="summaryField" layoutX="280.0" layoutY="374.0" prefHeight="71.0" prefWidth="194.0" promptText="Summary" />
+
+        <!-- Manga fields -->
+        <CheckBox fx:id="isColorCheckBox" layoutX="500.0" layoutY="14.0" text="Is Color" />
+        <ComboBox fx:id="demographicField" layoutX="500.0" layoutY="54.0" prefWidth="150.0" promptText="Demographic" />
+        <TextField fx:id="chapterCountField" layoutX="500.0" layoutY="94.0" promptText="Chapter Count" />
+        <TextField fx:id="volumeNumberField" layoutX="500.0" layoutY="134.0" promptText="Volume Number" />
+        <ComboBox fx:id="originalLanguageField" layoutX="500.0" layoutY="174.0" prefWidth="150.0" promptText="Original Language" />
+        <TextField fx:id="illustratorField" layoutX="500.0" layoutY="214.0" promptText="Illustrator" />
+
+        <!-- Periodical fields -->
+        <TextField fx:id="issueNumberField" layoutX="500.0" layoutY="254.0" promptText="Issue Number" />
+        <DatePicker fx:id="publicationDateField" layoutX="500.0" layoutY="294.0" prefWidth="150.0" promptText="Publication Date" />
+        <TextField fx:id="editorField" layoutX="500.0" layoutY="334.0" promptText="Editor" />
+        <ComboBox fx:id="frequencyField" layoutX="500.0" layoutY="374.0" prefWidth="150.0" promptText="Frequency" />
+
+        <!-- Radio buttons -->
+        <RadioButton fx:id="bookRadio" layoutX="14.0" layoutY="378.0" onAction="#disableFields" text="Book">
+         <toggleGroup>
+            <ToggleGroup fx:id="publicationType" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="mangaRadio" layoutX="79.0" layoutY="378.0" onAction="#disableFields" text="Manga" toggleGroup="$publicationType" />
+        <RadioButton fx:id="periodicalRadio" layoutX="150.0" layoutY="378.0" onAction="#disableFields" text="Periodical" toggleGroup="$publicationType" />
+
+        <!-- Buttons for CRUD -->
+        <Button fx:id="addPublicationButton" layoutX="14.0" layoutY="412.0" onAction="#createNewPublication" prefHeight="26.0" prefWidth="59.0" text="Add" />
+        <Button layoutX="90.0" layoutY="412.0" onAction="#updatePublication" prefHeight="26.0" prefWidth="59.0" text="Update" />
+        <Button layoutX="166.0" layoutY="412.0" onAction="#deletePublication" prefHeight="26.0" prefWidth="59.0" text="Delete" />
+      <Button fx:id="viewReservationsButton" layoutX="198.0" layoutY="484.0" mnemonicParsing="false" onAction="#viewReservations" text="Reservation History / Active Reservations" />
+    </children>
+</AnchorPane>

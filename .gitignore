@@ -1,0 +1,62 @@
+# Maven and Java build output
+/target/
+/out/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+*.war
+*.ear
+
+# Maven release and backup files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# IntelliJ IDEA
+/.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.springBeans
+.sts4-cache/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/build/
+/.nb-gradle/
+
+# Visual Studio Code
+/.vscode/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local.properties
+
+# Logs and JVM crash reports
+*.log
+hs_err_pid*
+replay_pid*
+
+# Legacy local serialized application data
+/data.txt
+*.ser
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
