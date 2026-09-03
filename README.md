@@ -1,5 +1,6 @@
 # Book Exchange
 Created in year 2024
+
 Book Exchange is a JavaFX desktop application for listing, discovering, and
 reserving publications. It was developed as a Java coursework project and
 demonstrates a layered desktop application backed by a relational database.
